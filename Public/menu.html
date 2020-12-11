@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <!-- need to add styles -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Menu Editor</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Menu Editor</a>
+        <a href="/stats">Menu</a>
+    </nav>
+    <div class="wrapper">
+        <header>
+            <h1>Menu Editor</h1>
+        </header>
+        <div class="ui container exercise">
+            <div class="ui raised card m-auto">
+                <h2>Add a Menu Item</h2>
+                <form action="POST">
+                    <div class="menu item">
+                        <label for="type">Menu Item</label>
+                        <select name="type" id="type">
+              <option disabled selected>Item Type</option>
+              <option value="appetizer">appetizer</option>
+              <option value="entree">entree</option>
+              <option value="dessert">dessert</option>
+            </select>
+                    </div>
+                    <div class="appetizer-form d-none">
+                        <div class="appetizer-name">
+                            <label for="appetizer-name">Name:</label>
+                            <input type="text" name="app-name" id="app-name" placeholder="Nachos" />
+                        </div>
+                        <div class="cost">
+                            <label for="cost">appetizer price</label>
+                            <input type="number" name="app-cost" id="app-cost" placeholder="5" />
+                        </div>
+                        <div class="entree-form d-none">
+                            <div class="entree">
+                                <label for="name">Entree Name</label>
+                                <input type="text" name="name" id="name" placeholder="Steak Tips" />
+                                <div class="cost">
+                                    <label for="cost">Entree Cost</label>
+                                    <input type="number" name="enttree-cost" id="entree-cost" placeholder="5" />
+                                </div>
+                                <div class="dessert-form d-none">
+                                    <div class="dessert-name">
+                                        <label for="dessert-name">Name:</label>
+                                        <input type="text" name="des-name" id="des-name" placeholder="Lava Cake" />
+                                    </div>
+                                    <div class="cost">
+                                        <label for="cost">dessert price</label>
+                                        <input type="number" name="des-cost" id="des-cost" placeholder="5" />
+                                    </div>
+                                    <div class="buttons">
+                                        <button disabled class="huge ui blue button complete">
+              Complete
+            </button>
+                                        <button disabled class="huge ui positive button add-another">
+              Add Menu Item
+            </button>
+                                    </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div>
+                    Menu Item Added Successfully!
+                </div>
+                <script src="/api.js"></script>
+                <script src="/exercise.js"></script>
+</body>
+
+</html>
